@@ -5,17 +5,55 @@ if next_position == "1":
     print(". . .")
     print(". . .")
 
-if next_position == "2":
-    print(". x .")
-    print(". . .")
-    print(". . .")
+    next_position = input("Please type what position: ")
 
-if next_position == "3":
+    if next_position == "1":
+        print("CANT DO THE MOVE")
+
+    elif next_position == "2":
+        print("x o .")
+        print(". . .")
+        print(". . .")
+
+        next_position = input("Please type what position: ")
+
+        if next_position == "1":
+            print("CANT DO THE MOVE")
+
+        elif next_position == "2":
+            print("CANT DO THE MOVE")
+
+        elif next_position == "3":
+            print("x o x")
+            print(". . .")
+            print(". . .")
+
+            next_position = input("Please type what position: ")
+            
+            if next_position == "1":
+                print("CANT DO THE MOVE")
+            
+            elif next_position == "2":
+                print("CANT DO THE MOVE")
+            
+            elif next_position == "3":
+                print("CANT DO THE MOVE")
+            
+            elif next_position == "4":
+                print("x o x")
+                print("o . .")
+                print(". . .")
+
+
+
+
+
+elif next_position == "3":
     print(". . x")
     print(". . .")
     print(". . .")
 
-if next_position == "4":
+elif next_position == "4":
     print(". . .")
     print("x . .")
     print(". . .")
