@@ -1,4 +1,4 @@
 Hello!
 
-This is my first GIT projekt.
+This is my first GIT project.
 
