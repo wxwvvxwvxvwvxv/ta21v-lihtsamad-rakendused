@@ -21,6 +21,7 @@ def get_next_free_position(current_position_y, current_position_x):
         print("can go right")
         return [current_position_y, current_position_x - 1]
         
+        
     if current_position_y + 1 < y_rows and map[current_position_y + 1][current_position_x] == 1:
         print("can go bottom")
         return [current_position_y + 1, current_position_x]
