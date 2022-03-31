@@ -1,85 +1,21 @@
+game = [
+    ".", ".", ".",
+    ".", ".", ".",
+    ".", ".", "."
+]
+
+print(game[0] + game[1] + game[2])
+print(game[3] + game[4] + game[5])
+print(game[6] + game[7] + game[8])
+
 next_position = input("Please type what position: ")
 
 if next_position == "1":
-    print("x . .")
-    print(". . .")
-    print(". . .")
+    game[0] = "X"
 
-    next_position = input("Please type what position: ")
+if next_position == "2":
+    game[1] = "X"
 
-    if next_position == "1":
-        print("CANT DO THE MOVE")
-
-    elif next_position == "2":
-        print("x o .")
-        print(". . .")
-        print(". . .")
-
-        next_position = input("Please type what position: ")
-
-        if next_position == "1":
-            print("CANT DO THE MOVE")
-
-        elif next_position == "2":
-            print("CANT DO THE MOVE")
-
-        elif next_position == "3":
-            print("x o x")
-            print(". . .")
-            print(". . .")
-
-            next_position = input("Please type what position: ")
-            
-            if next_position == "1":
-                print("CANT DO THE MOVE")
-            
-            elif next_position == "2":
-                print("CANT DO THE MOVE")
-            
-            elif next_position == "3":
-                print("CANT DO THE MOVE")
-            
-            elif next_position == "4":
-                print("x o x")
-                print("o . .")
-                print(". . .")
-
-
-
-
-
-elif next_position == "3":
-    print(". . x")
-    print(". . .")
-    print(". . .")
-
-elif next_position == "4":
-    print(". . .")
-    print("x . .")
-    print(". . .")
-
-
-if next_position == "5":
-    print(". . .")
-    print(". x .")
-    print(". . .")
-
-if next_position == "6":
-    print(". . .")
-    print(". . x")
-    print(". . .")
-
-if next_position == "7":
-    print(". . .")
-    print(". . .")
-    print("x . .")
-
-if next_position == "8":
-    print(". . .")
-    print(". . .")
-    print(". x .")
-
-if next_position == "9":
-    print(". . .")
-    print(". . .")
-    print(". . x")
+print(game[0] + game[1] + game[2])
+print(game[3] + game[4] + game[5])
+print(game[6] + game[7] + game[8])
