@@ -3,24 +3,6 @@ game = [
     ".", ".", ".",
     ".", ".", "."
 ]
-<<<<<<< HEAD
-
-print(game[0] + game[1] + game[2])
-print(game[3] + game[4] + game[5])
-print(game[6] + game[7] + game[8])
-
-next_position = input("Please type what position: ")
-
-if next_position == "1":
-    game[0] = "X"
-
-if next_position == "2":
-    game[1] = "X"
-
-print(game[0] + game[1] + game[2])
-print(game[3] + game[4] + game[5])
-print(game[6] + game[7] + game[8])
-=======
 def gamePlan():
     print(game[0] + game[1] + game[2])
     print(game[3] + game[4] + game[5])
@@ -104,4 +86,3 @@ for i in range(1, 10):
     elif game[3] == "o" and game[4] == "o" and game[6] == "o":
         print("Player two - winner")
         break
->>>>>>> e2ca075a3974c10975a99da1777b4e4c5ed93db7
