@@ -14,7 +14,14 @@ y_rows = 5
 x_columns = 5
 
 def get_next_free_position(current_position_y, current_position_x):
-    if current_position_x + 1 < x_columns and map[current_position_y][current_position_x+1] == 1:
+    random_number=random.random()
+
+    can_go_right = current_position_x + 1 < x_columns and map[current_position_y][current_position_x+1] == 1
+    can_go_left = 
+    can_go_bottom = 
+    can_go_top = 
+    
+    if 
         print("can go right")
         return [current_position_y, current_position_x + 1]
 
