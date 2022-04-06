@@ -51,7 +51,15 @@ def get_next_free_position(current_position_y, current_position_x):
         else:
             print("can go top")
             return [current_position_y - 1, current_position_x]
-
+            
+    if finish and can_go_right:
+        if random_number < 0.5:
+            print("can go right")
+            return [current_position_y, current_position_x + 1]
+        elif random_number > 0.5:
+            print("finish")
+            return [current_position_y -1 , current_position_x]
+            
     if can_go_left:
         
         print("can go left")
@@ -72,13 +80,7 @@ def get_next_free_position(current_position_y, current_position_x):
         print("can go up")
         return [current_position_y -1 , current_position_x]
 
-    if finish and can_go_right:
-        if random_number < 0.5:
-            print("can go right")
-            return [current_position_y, current_position_x + 1]
-        else:
-            print("finish")
-            return [current_position_y -1 , current_position_x]
+    
 
     
 
