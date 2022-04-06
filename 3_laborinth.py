@@ -21,7 +21,7 @@ def get_next_free_position(current_position_y, current_position_x):
     can_go_bottom = current_position_y + 1 < y_rows and map[current_position_y + 1][current_position_x] == 1
     can_go_top = current_position_y - 1 > 0 and map[current_position_y - 1][current_position_x] == 1
 
-    def RM():
+    def random_num():
         if random_number < 0.25:
             
             print(can_go_right)
