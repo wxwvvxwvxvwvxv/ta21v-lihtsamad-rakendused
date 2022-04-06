@@ -20,7 +20,7 @@ def get_next_free_position(current_position_y, current_position_x):
     can_go_left = current_position_x - 1 >= 0 and map[current_position_y][current_position_x - 1] == 1
     can_go_bottom = current_position_y + 1 < y_rows and map[current_position_y + 1][current_position_x] == 1
     can_go_top = current_position_y - 1 >= 0 and map[current_position_y - 1][current_position_x] == 1
-    F = current_position_y - 1 >= 0 and map[current_position_y - 1][current_position_x] == 24
+    finish = current_position_y - 1 >= 0 and map[current_position_y - 1][current_position_x] == 24
 
    
 
@@ -71,6 +71,16 @@ def get_next_free_position(current_position_y, current_position_x):
         
         print("can go up")
         return [current_position_y -1 , current_position_x]
+
+    if finish and can_go_right:
+        if random_number < 0.5:
+            print("can go right")
+            return [current_position_y, current_position_x + 1]
+        else:
+            print("finish")
+            return [current_position_y -1 , current_position_x]
+
+    
 
     
 
