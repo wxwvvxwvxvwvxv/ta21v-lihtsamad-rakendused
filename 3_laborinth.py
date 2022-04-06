@@ -17,28 +17,28 @@ def get_next_free_position(current_position_y, current_position_x):
     random_number=random.random()
 
     can_go_right = current_position_x + 1 < x_columns and map[current_position_y][current_position_x+1] == 1
-    can_go_left = 
-    can_go_bottom = 
+    can_go_left = current_position_x - 1 > 0 and map[current_position_y][current_position_x - 1] == 1:
+    can_go_bottom = current_position_y + 1 < y_rows and map[current_position_y + 1][current_position_x] == 1:
     can_go_top = current_position_y - 1 > 0 and map[current_position_y - 1][current_position_x] == 1:
 
-    if can_go_right
+    if can_go_right:
         print("can go right")
         return [current_position_y, current_position_x + 1]
 
-    if current_position_x - 1 > 0 and map[current_position_y][current_position_x - 1] == 1:
-        print("can go right")
+    if can_go_left:
+        print("can go left")
         return [current_position_y, current_position_x - 1]
         
         
-    if current_position_y + 1 < y_rows and map[current_position_y + 1][current_position_x] == 1:
+    if can_go_bottom:
         print("can go bottom")
         return [current_position_y + 1, current_position_x]
 
-    if 
-        print("can go right")
+    if can_go_top:
+        print("can go up")
         return [current_position_y -1 , current_position_x]
 
-next_free_position = get_next_free_position(start_pos_y, start_pos_x)
+next_free_position = get_next_free_position(start_pos_x, start_pos_y)
 print("Next free position is: ", next_free_position)
 
 while next_free_position:
