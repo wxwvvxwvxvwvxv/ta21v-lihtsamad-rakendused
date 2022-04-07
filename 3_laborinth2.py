@@ -13,6 +13,7 @@ map = [
     [WALL, WALL, ROAD, ROAD, ROAD]
 ]
 
+
 start_pos_x = 0
 start_pos_y = 0
 
