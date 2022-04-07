@@ -30,6 +30,7 @@ def get_next_free_position(current_position_y, current_position_x):
 
    
 
+
     if can_go_left:
         
         print("can go left")
