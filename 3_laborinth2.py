@@ -9,8 +9,8 @@ map = [
     [START, ROAD, ROAD, ROAD, ROAD],
     [WALL, WALL, WALL, WALL, ROAD],
     [WALL, WALL, WALL, WALL, ROAD],
-    [WALL, WALL, WALL, WALL, ROAD],
-    [WALL, WALL, WALL, WALL, FINISH]
+    [WALL, WALL, FINISH, WALL, ROAD],
+    [WALL, WALL, ROAD, ROAD, ROAD]
 ]
 
 start_pos_x = 0
@@ -56,6 +56,21 @@ def get_next_free_position(current_position_y, current_position_x):
     #     else:
     #         print("can go bottom")
     #         return [current_position_y + 1, current_position_x]
+
+
+    if finish_right:
+        print("Finish on right, stopping execution")
+        return False
+    if finish_left:
+        print("Finish on left, stopping execution")
+        return False
+    if finish_bottom:
+        print("Finish on bottom, stopping execution")
+        return False
+    if finish_top:
+        print("Finish on top, stopping execution")
+        return False
+
 
     available_next_positions = []
 
