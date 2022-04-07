@@ -27,6 +27,10 @@ def get_next_free_position(current_position_y, current_position_x):
     can_go_bottom = current_position_y + 1 < y_rows and map[current_position_y + 1][current_position_x] == ROAD
     can_go_top = current_position_y - 1 > 0 and map[current_position_y - 1][current_position_x] == ROAD
     
+    finish_right = current_position_x + 1 < x_columns and map[current_position_y][current_position_x+1] == FINISH
+    finish_left = current_position_x - 1 > 0 and map[current_position_y][current_position_x - 1] == FINISH
+    finish_bottom = current_position_y + 1 < y_rows and map[current_position_y + 1][current_position_x] == FINISH
+    finish_top = current_position_y - 1 > 0 and map[current_position_y - 1][current_position_x] == FINISH
 
    
     # if can_go_left and can_go_right:
@@ -58,22 +62,26 @@ def get_next_free_position(current_position_y, current_position_x):
     if can_go_left:
         
         print("can go left")
-        return [current_position_y, current_position_x - 1]
+        position_on_left = [current_position_y, current_position_x - 1]
+        available_next_positions.append(position_on_left)
 
     if can_go_right:
-        
         print("can go right")
-        return [current_position_y, current_position_x + 1]
+        position_on_right = [current_position_y, current_position_x + 1]
+        available_next_positions.append(position_on_right)
+        
 
     if can_go_bottom:
         
         print("can go bottom")
-        return [current_position_y + 1, current_position_x]
+        position_on_bottom = [current_position_y + 1, current_position_x]
+        available_next_positions.append(position_on_bottom)
 
     if can_go_top:
         
         print("can go up")
-        return [current_position_y -1 , current_position_x]
+        position_on_top = [current_position_y - 1, current_position_x]
+        available_next_positions.append(position_on_top)
 
     return random.choice(available_next_positions)
 
