@@ -23,13 +23,37 @@ def get_next_free_position(current_position_y, current_position_x):
     random_number=random.random()
 
     can_go_right = current_position_x + 1 < x_columns and map[current_position_y][current_position_x+1] == ROAD
-    can_go_left = current_position_x - 1 >= 0 and map[current_position_y][current_position_x - 1] == ROAD
+    can_go_left = current_position_x - 1 > 0 and map[current_position_y][current_position_x - 1] == ROAD
     can_go_bottom = current_position_y + 1 < y_rows and map[current_position_y + 1][current_position_x] == ROAD
-    can_go_top = current_position_y - 1 >= 0 and map[current_position_y - 1][current_position_x] == ROAD
-    finish = current_position_y - 1 >= 0 and map[current_position_y - 1][current_position_x] == 24
+    can_go_top = current_position_y - 1 > 0 and map[current_position_y - 1][current_position_x] == ROAD
+    
 
    
+    # if can_go_left and can_go_right:
+    #     if random_number > 0.5:
+    #         print("can go right")
+    #         return [current_position_y, current_position_x + 1]
+    #     else:
+    #         print("can go left")
+    #         return [current_position_y, current_position_x - 1]
 
+    # if can_go_left and can_go_bottom:
+    #     if random_number > 0.5:
+    #         print("can go bottom")
+    #         return [current_position_y + 1, current_position_x]
+    #     else:
+    #         print("can go left")
+    #         return [current_position_y, current_position_x - 1]
+
+    # if can_go_top and can_go_bottom:
+    #     if random_number > 0.5:
+    #         print("can go top")
+    #         return [current_position_y -1 , current_position_x]
+    #     else:
+    #         print("can go bottom")
+    #         return [current_position_y + 1, current_position_x]
+
+    available_next_positions = []
 
     if can_go_left:
         
@@ -50,6 +74,8 @@ def get_next_free_position(current_position_y, current_position_x):
         
         print("can go up")
         return [current_position_y -1 , current_position_x]
+
+    return random.choice(available_next_positions)
 
 next_free_position = get_next_free_position(start_pos_x, start_pos_y)
 print("Next free position is: ", next_free_position )
