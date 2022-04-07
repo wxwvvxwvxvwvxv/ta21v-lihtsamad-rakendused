@@ -17,6 +17,7 @@ with mp_hands.Hands(
     # Convert the BGR image to RGB before processing.
     results = hands.process(cv2.cvtColor(image, cv2.COLOR_BGR2RGB))
 
+
     # Print handedness and draw hand landmarks on the image.
     print('Handedness:', results.multi_handedness)
     if not results.multi_hand_landmarks:
