@@ -24,6 +24,7 @@ def get_next_free_position(current_position_y, current_position_x):
 
    
 
+
     if can_go_bottom and can_go_left:
         if random_number < 0.25:
             print("can go bottom")
@@ -70,6 +71,7 @@ def get_next_free_position(current_position_y, current_position_x):
         print("can go right")
         return [current_position_y, current_position_x + 1]
 
+
     if can_go_bottom:
         
         print("can go bottom")
@@ -79,6 +81,8 @@ def get_next_free_position(current_position_y, current_position_x):
         
         print("can go up")
         return [current_position_y -1 , current_position_x]
+
+
 
 next_free_position = get_next_free_position(start_pos_x, start_pos_y)
 print("Next free position is: ", next_free_position )
