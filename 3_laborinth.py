@@ -80,14 +80,6 @@ def get_next_free_position(current_position_y, current_position_x):
         print("can go up")
         return [current_position_y -1 , current_position_x]
 
-    
-
-    
-
-    
-
-
-
 next_free_position = get_next_free_position(start_pos_x, start_pos_y)
 print("Next free position is: ", next_free_position )
 
