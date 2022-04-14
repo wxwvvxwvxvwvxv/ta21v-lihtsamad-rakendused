@@ -30,7 +30,7 @@ with mp_hands.Hands(
     if results.multi_hand_landmarks:
       for hand_landmarks in results.multi_hand_landmarks:
         print(hand_landmarks.landmark[8])
-        x = hand_landmarks.landmark[8].y * image_width
+        x = hand_landmarks.landmark[8].x * image_width
         y = hand_landmarks.landmark[8].y * image_heigth
         mp_drawing.draw_landmarks(
             image,
