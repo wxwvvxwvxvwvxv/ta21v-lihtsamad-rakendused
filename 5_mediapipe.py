@@ -33,17 +33,17 @@ with mp_hands.Hands(
       for hand_landmarks in results.multi_hand_landmarks:
         print(hand_landmarks.landmark[8])
         image_height, image_width, _ = image.shape
-        x = hand_landmarks.landmark[8].x * image_width
-        y = hand_landmarks.landmark[8].y * image_height
+        x = int(hand_landmarks.landmark[8].x * image_width)
+        y = int(hand_landmarks.landmark[8].y * image_height)
         
         center_coordinates = (round(x), round(y))
         radius = 50
         color = (255, 0, 0)
         thickness = 2
         cv2.circle(image, center_coordinates, radius, color, thickness)
-        rCoordinates1 = (200, 100)
-        rCoordinates2 = (100, 200)
-        cv2.rectangle(image, rCoordinates1, rCoordinates2, color, thickness)
+
+        
+        cv2.rectangle(image, (20,y),(20, y+50), color, thickness)
         
     # Flip the image horizontally for a selfie-view display.
     cv2.imshow('MediaPipe Hands', cv2.flip(image, 1))
