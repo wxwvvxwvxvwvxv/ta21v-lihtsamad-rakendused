@@ -25,6 +25,7 @@ with mp_hands.Hands(
     results = hands.process(image)
 
 
+
     # Draw the hand annotations on the image.
     image.flags.writeable = True
     image = cv2.cvtColor(image, cv2.COLOR_RGB2BGR)
