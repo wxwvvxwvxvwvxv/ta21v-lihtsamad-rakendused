@@ -41,15 +41,10 @@ with mp_hands.Hands(
         color = (255, 0, 0)
         thickness = 2
         cv2.circle(image, center_coordinates, radius, color, thickness)
-        rCoordinates1 = (200, 300)
+        rCoordinates1 = (200, 100)
         rCoordinates2 = (100, 200)
         cv2.rectangle(image, rCoordinates1, rCoordinates2, color, thickness)
-        mp_drawing.draw_landmarks(
-            image,
-            hand_landmarks,
-            mp_hands.HAND_CONNECTIONS,
-            mp_drawing_styles.get_default_hand_landmarks_style(),
-            mp_drawing_styles.get_default_hand_connections_style())
+        
     # Flip the image horizontally for a selfie-view display.
     cv2.imshow('MediaPipe Hands', cv2.flip(image, 1))
     if cv2.waitKey(5) & 0xFF == 27:
