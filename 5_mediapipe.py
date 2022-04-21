@@ -31,8 +31,16 @@ with mp_hands.Hands(
     if results.multi_hand_landmarks:
       for hand_landmarks in results.multi_hand_landmarks:
         print(hand_landmarks.landmark[8])
+        image_height, image_width, _ = image.shape
         x = hand_landmarks.landmark[8].x * image_width
-        y = hand_landmarks.landmark[8].y * image_heigth
+        y = hand_landmarks.landmark[8].y * image_height
+        
+        center_coordinates = (round(x), round(y))
+        radius = 50
+        color = (255, 0, 0)
+        thickness = 2
+        cv2.circle(image, center_coordinates, radius, color, thickness)
+
         mp_drawing.draw_landmarks(
             image,
             hand_landmarks,
