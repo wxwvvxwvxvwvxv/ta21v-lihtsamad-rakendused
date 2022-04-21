@@ -33,10 +33,10 @@ with mp_hands.Hands(
       for hand_landmarks in results.multi_hand_landmarks:
         print(hand_landmarks.landmark[8])
         image_height, image_width, _ = image.shape
-        x = int(hand_landmarks.landmark[8].x * image_width)
-        y = int(hand_landmarks.landmark[8].y * image_height)
+        x = int(hand_landmarks.landmark[8].x * 640)
+        y = int(hand_landmarks.landmark[8].y * 480)
         
-        center_coordinates = (round(x), round(y))
+        center_coordinates = (x, y)
         radius = 50
         color = (255, 0, 0)
         thickness = 2
