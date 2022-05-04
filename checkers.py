@@ -21,11 +21,6 @@ def showField():
     print(field1[7][0] + field1[7][1] + field1[7][2] + field1[7][3] + field1[7][4] + field1[7][5] + field1[7][6] + field1[7][7] + field1[7][8])
     print(field1[8][0] + field1[8][1] + field1[8][2] + field1[8][3] + field1[8][4] + field1[8][5] + field1[8][6] + field1[8][7])
 
-#def chooseIndex(checker_num_position, checker_char_position):
-
-one_more = False
-#def nextPositionWhite():
-    
 def checkFirstIndex(checker_num_position):
     while True:
         if checker_num_position == "1":
@@ -147,8 +142,8 @@ def checkNewSecondIndex(next_checker_char):
             break
 
 def checkCanGoNext_for_white():
-    if field1[checkFirstIndex(checker_num_position)][checkSecondIndex(checker_char_position)] == " W ":
-        old_check_index_1 = [checkFirstIndex(checker_num_position)]
+    if field1[checkFirstIndex(checker_num_position)][checkSecondIndex(checker_char_position)] == " W ": #check if checker is W
+        old_check_index_1 = [checkFirstIndex(checker_num_position)] 
         old_check_index_2 = [checkSecondIndex(checker_char_position)]
         print(old_check_index_1, old_check_index_2)
 
@@ -237,7 +232,6 @@ def checkCanGoNext_for_black():
 i = 0
 showField()
 while True:
-    
     if i % 2 == 0:
 
         if " W " not in field1[0] and " W " not in field1[1] and " W " not in field1[2] and " W " not in field1[3] and " W " not in field1[4] and " W " not in field1[5] and " W " not in field1[6] and " W " not in field1[7]:
