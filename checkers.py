@@ -10,6 +10,7 @@ field1 = [
     [" a ", " b ", " c ", " d ", " e ", " f ", " g ", " h "] #8
     ]
 
+
 def showField():
     print(field1[0][0] + field1[0][1] + field1[0][2] + field1[0][3] + field1[0][4] + field1[0][5] + field1[0][6] + field1[0][7] + field1[0][8])
     print(field1[1][0] + field1[1][1] + field1[1][2] + field1[1][3] + field1[1][4] + field1[1][5] + field1[1][6] + field1[1][7] + field1[1][8])
