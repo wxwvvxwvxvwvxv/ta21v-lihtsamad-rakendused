@@ -1,0 +1,76 @@
+<b>Hello</b>
+
+<img src="forest.jpg" alt="dark forest">
+
+<a href="https://github.com/wxwvvxwvxvwvxv">author</a>
+
+<!doctype html>
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body>
+ 	<h1 class="text-3xl font-bold underline">Forest!</h1>
+	<button id="hello-button" class="bg-red-900 text-red-500 rounded" onclick="hello()">Hello</button>
+	<script>
+ 		function hello() {
+			alert("hello");
+			console.log("hello");
+			document.getElementById("hello-button").innerHTML = "Yay";
+		}
+	</script>
+    <style>
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td, th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: #dddddd;
+}
+</style>
+</head>
+<body>
+
+<h2>HTML Table</h2>
+
+<table>
+  <tr>
+    <th>Colour</th>
+    <th>Example</th>
+  </tr>
+  <tr>
+    <td>Red</td>
+    <td>Fire</td>
+  </tr>
+  <tr>
+    <td>Green</td>
+    <td>Grass</td>
+  </tr>
+  <tr>
+    <td>Blue</td>
+    <td>Sky</td>
+    <td><img src="Clouds.jpg" alt="Sky"></td>
+  </tr>
+</table>
+
+</body>
+</html>
+
+
+
+<button class="bg-red-700 hover:bg-red-800 text-white font-bold py-2 px-4 rounded-full">
+  Button
+</button>
+
